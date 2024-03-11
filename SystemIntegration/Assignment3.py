@@ -19,15 +19,16 @@ driver.implicitly_wait(10)
 additional_element = driver.find_element(By.XPATH, "/html/body/div[1]/header/div/div[4]/div[2]/div[2]/div/a[10]")
 additional_element.click()
 
-# Waiting for the page to load
-driver.implicitly_wait(10)
+# Waiting for the page to loadH
+time.sleep(5)
 
-#03 Clicking on the Sneakers into Fashion category
+#03 Clicking on the Colourfull Sneakers into Fashion category
 next_element = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div[2]/div[1]/div/section/div[2]/div/div/div/div/ol/li[3]/a/div/img")
 next_element.click()
 
 # Waiting for the page to load
-driver.implicitly_wait(10)
+#driver.implicitly_wait(10)
+time.sleep(5)
 
 #04 Choosing a specific women sneaker among multiple
 next_element = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/div[3]/div/div/div/div[3]/div[1]/span/div/div/div[2]/div/span/a/div/img")
@@ -35,7 +36,8 @@ next_element = driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[2]/di
 next_element.click()
 
 # Waiting for the page to load
-driver.implicitly_wait(10)
+#driver.implicitly_wait(10)
+time.sleep(7)
 
 #05 Selecting the size from dropdown menu
 select_element = driver.find_element(By.ID, "native_dropdown_selected_size_name") #Id value defined
@@ -63,14 +65,15 @@ try:
     # Perform actions as needed with the input element
     # For example, you can click on the input element
     input_element.click()
+    time.sleep(8)
 
-    # Or you can retrieve other attributes like the 'data-csa-c-id'
+    #08  Or you can retrieve other attributes like the 'data-csa-c-id'
     data_csa_c_id = input_element.get_attribute('data-csa-c-id')
     print("Data-csa-c-id: ", data_csa_c_id)
 
 except TimeoutException:
     print("Input Element not found within the specified timeout period")
 
-time.sleep(10)  # Pause for 10 seconds
-# Close the browser
+time.sleep(5)  # Pause for 10 seconds
+#09 Close the browser
 driver.quit()
